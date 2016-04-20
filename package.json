@@ -1,0 +1,30 @@
+{
+  "name": "customfood",
+  "version": "1.0.0",
+  "description": "Aplicación de búsqueda de recetas en base a los ingredientes del usuario",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^13.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelGonzalezAravena/CustomFood.git"
+  },
+  "keywords": [
+    "food",
+    "custom",
+    "application",
+    "desarrollo",
+    "web"
+  ],
+  "author": "Miguel González Aravena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiguelGonzalezAravena/CustomFood/issues"
+  },
+  "homepage": "https://github.com/MiguelGonzalezAravena/CustomFood#readme"
+}
