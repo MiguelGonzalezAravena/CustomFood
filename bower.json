@@ -1,0 +1,29 @@
+{
+  "name": "customfood",
+  "description": "Aplicación de búsqueda de recetas en base a los ingredientes del usuario",
+  "main": "node ./bin/www",
+  "authors": [
+    "Miguel González Aravena"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "food",
+    "custom",
+    "application",
+    "desarrollo",
+    "web"
+  ],
+  "homepage": "https://github.com/MiguelGonzalezAravena/CustomFood",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-bootstrap": "^1.3.2"
+  }
+}
