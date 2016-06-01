@@ -1,0 +1,10 @@
+body {
+  background-image: url('/assets/background-admin.png');
+}
+
+.logo {
+  background: url('/assets/custom-food.png') no-repeat center;
+  height: 97px;
+  text-align: center;
+  margin-bottom: 20px;
+}

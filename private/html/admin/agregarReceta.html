@@ -1,0 +1,98 @@
+<div class="panel panel-default" ng-controller="BusquedaCtrl">
+  <div class="panel-body ingredientes" >
+    <div class="col-md-12">
+      <div class="row text-center">
+        <h2>Agrega tus ingredientes</h2>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" ng-model="selected" uib-typeahead="ing for ing in listaIngredientes | filter:$viewValue | limitTo:8" class="form-control input-lg" placeholder="Ingrediente...">
+            <span class="input-group-btn">
+             <button class="btn btn-success btn-lg" type="button" ng-click="agregarIngrediente()">
+                <i class="glyphicon glyphicon-plus"></i>
+                Agregar
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row" ng-show="show">
+        <div class="form-group">
+          <span class="label label-warning" ng-repeat="name in ingredientes">{{name}} <i class="glyphicon glyphicon-remove"></i></span> 
+        </div>
+      </div>
+      <div class="row" ng-show="!show">
+        <div class="form-group">
+          <div class="alert alert-info">
+            <i class="glyphicon glyphicon-info-sign"></i> No se ha insertado ningún ingrediente a la búsqueda.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <button class="btn btn-primary btn-lg" ng-click="buscar()">
+            <i class="glyphicon glyphicon-search"></i> Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>Resultados</h2>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h4><a href="#">Receta 1</a></h4>
+          <p>
+            <img src="/assets/receta1.jpg" class="thumbnail imagen-receta">
+          </p>
+          <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+          <div class="text-right">
+            <button class="btn btn-sm btn-success">Ver receta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h4><a href="#">Receta 2</a></h4>
+          <p>
+            <img src="/assets/receta1.jpg" class="thumbnail imagen-receta">
+          </p>
+          <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+          <div class="text-right">
+            <button class="btn btn-sm btn-success">Ver receta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h4><a href="#">Receta 3</a></h4>
+          <p>
+            <img src="/assets/receta1.jpg" class="thumbnail imagen-receta">
+          </p>
+          <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+          <div class="text-right">
+            <button class="btn btn-sm btn-success">Ver receta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-md-6">
+      &copy; CustomFood  2016
+    </div>
+    <div class="col-md-6">
+      <div class="text-right">
+        <a href="/administrador">Administrador</a>
+      </div>
+    </div>
+  </div>
+</div>

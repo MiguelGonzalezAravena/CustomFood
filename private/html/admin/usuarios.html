@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4>Usuarios</h4>
+    <div ng-controller="AUsuariosCtrl as showCase">
+      <p class="text-danger"><strong>{{ showCase.message }}</strong></p>
+      <br>
+      <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" dt-instance="showCase.dtInstance" class="row-border hover"></table>
+    </div>
+  </div>
+</div>
