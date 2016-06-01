@@ -1,0 +1,24 @@
+.imagen-receta {
+  width: 100%;
+}
+
+.btn-register {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.puntuar {
+  margin-top: -9px;
+  text-align: center;
+}
+
+.admin {
+  background-image: url('/assets/background-admin.png');
+}
+
+.logo {
+  background: url('/assets/custom-food.png') no-repeat center;
+  height: 97px;
+  text-align: center;
+  margin-bottom: 20px;
+}
