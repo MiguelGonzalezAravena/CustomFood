@@ -6,6 +6,7 @@ var express = require('express')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
   , routes = require('./routes/index')
+  , admin = require('./routes/admin')
   , users = require('./routes/users')
   , app = express()
 ;
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/admin', admin);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
@@ -41,7 +43,8 @@ if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
-      error: err
+      error: err,
+      title: 'Página no encontrada'
     });
   });
 }
