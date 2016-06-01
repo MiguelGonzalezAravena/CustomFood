@@ -61,6 +61,12 @@ module.exports = function(grunt){
         , message: 'HTML files have been minified successfully.'
         }
       }
+    , angularPages: {
+        options: {
+          title: 'PAGES'
+        , message: 'Pages are ready to be used.'
+        }
+      }
     , fonts: {
         options: {
           title: 'FONTS'
@@ -116,7 +122,7 @@ module.exports = function(grunt){
         }
       , files: [{
           expand: true
-        , cwd: assetsPrivateDir+'img/'
+        , cwd: assetsPrivateDir + 'img/'
         , src: ['**/*.{png,jpg,gif}']
         , dest: assetsPublicDir
         }]
@@ -230,13 +236,21 @@ module.exports = function(grunt){
     , fonts: {
         files: [{
           expand: true
-        , cwd: assetsPrivateDir+'fonts/'
+        , cwd: assetsPrivateDir + 'fonts/'
         , src: ['**/*.{ttf,otf,woff,eot,svg}']
         , dest: assetsPublicDir
         }]
       }
     , files: {
         files: concatAssets
+      }
+    , angularPages: {
+        files: [{
+          expand: true
+        , cwd: viewsDir
+        , src: ['**/*']
+        , dest: publicDir + 'pages'
+        }]
       }
     , assets: {
         files: [{
@@ -253,7 +267,7 @@ module.exports = function(grunt){
     , favicons: {
         files: [{
           expand: true
-        , cwd: assetsPrivateDir+'img/'
+        , cwd: assetsPrivateDir + 'img/'
         , src: ['**/favicon.ico']
         , dest: publicDir
         }]
@@ -356,6 +370,16 @@ module.exports = function(grunt){
       , tasks: [
           'newer:imagemin'
         , 'notify:imagemin'
+        ]
+      }
+    , angularPages: {
+        options: {
+          livereload: true
+        }
+      , files: [viewsDir + '**/*']
+      , tasks: [
+          'copy:angularPages'
+        , 'notify:angularPages'
         ]
       }
     , htmlmin: {
